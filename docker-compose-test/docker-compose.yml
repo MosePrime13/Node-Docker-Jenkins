@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres
+    networks:
+      - app-network
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: test_db
+  nodetest:
+    build:
+      context: ../
+      dockerfile: Dockerfile-test
+    image: nodetest
+    container_name: nodetest
+    restart: unless-stopped
+    networks:
+      - app-network
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      PORT: 3010
+      NODE_ENV: test 
+networks:
+  app-network:

@@ -1,0 +1,33 @@
+{
+    "development": {
+      "username": "root",
+      "password": null,
+      "database": "aror_db",
+      "params": {
+        "dialect": "mysql",
+        "host": "localhost",
+        "logging": false
+      }
+    },
+    "production": {
+      "username": "aror_api",
+      "database": "aror_db",
+      "password": null,
+      "params": {
+        "dialect": "postgres",
+        "host": "167.71.134.226",
+        "logging": false,
+        "port": 26257
+      }
+    },
+    "test":{
+        "username": "postgres",
+        "password": "postgres",
+        "database": "test_db",
+        "params": {
+          "dialect": "postgres",
+          "host": "",
+          "logging": false
+        }
+    }
+}
