@@ -19,7 +19,7 @@ export default function(app: fastify.FastifyInstance){
         } else {
             app.log.error(error)
         }
-        res.code(500).send(errorResponses('001', 'Server error', []));
+        res.code(500).send(errorResponses('001', 'Server error', [{ message: error.message }]));
     });
 
 }

@@ -21,13 +21,13 @@
       }
     },
     "test":{
-        "username": "postgres",
-        "password": "postgres",
-        "database": "test_db",
-        "params": {
-          "dialect": "postgres",
-          "host": "",
-          "logging": false
-        }
+      "username": "root",
+      "password": null,
+      "database": "aror_db",
+      "params": {
+        "dialect": "mysql",
+        "host": "localhost",
+        "logging": false
+      }
     }
 }

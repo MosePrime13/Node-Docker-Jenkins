@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   db:
-    image: postgres
+    image: postgres:12-alpine
     networks:
       - app-network
     environment:
@@ -15,7 +15,6 @@ services:
       dockerfile: Dockerfile-test
     image: nodetest
     container_name: nodetest
-    restart: unless-stopped
     networks:
       - app-network
     depends_on:

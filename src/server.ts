@@ -13,7 +13,7 @@ const app: fastify.FastifyInstance<
     IncomingMessage,
     ServerResponse
 > = fastify({
-    logger: true,
+    logger: false,
     pluginTimeout: 100000
 });
 

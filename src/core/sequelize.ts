@@ -10,8 +10,6 @@ console.log('DB CONNECTION IS:', process.env.NODE_ENV);
 
 const { database, username, password, params } = require('../../config/db.json')[process.env.NODE_ENV];
 
-console.log(`DB IS ${database}`);
-
 
 let sequelize;
 
@@ -21,6 +19,7 @@ if(process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
         dialect: params.dialect,
         host: process.env.DB_HOST || params.host,
         logging: params.logging,
+        operatorsAliases: false,
         pool: {
           max: 5,
           min: 0,
@@ -45,6 +44,7 @@ if(process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
         database: database,
         username: username,
         password: password,
+        operatorsAliases: false,
         dialect: params.dialect,
         host: params.host,
         logging: params.logging,
