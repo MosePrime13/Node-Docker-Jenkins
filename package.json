@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": 
-    "ts-node src/server.ts",
-    "test": "jest --verbose"
+    "start": "ts-node src/server.ts",
+    "test": "jest --ci --verbose --forceExit --detectOpenHandles"
   },
   "keywords": [],
   "author": "",

@@ -12,7 +12,7 @@ describe('/country', () => {
         console.log('______TEST SERVER STARTED______');
 
         done();
-        // jest.clearAllMocks();
+       
     });
 
     afterAll((done) => {

@@ -31,4 +31,15 @@ app.listen(Number(process.env.PORT), '0.0.0.0', function(err, address){
     app.log.info(`Server listening on port ${address}`)
 });
 
+// const start = async() => {
+//     try{
+//         await app.listen(Number(process.env.PORT), '0.0.0.0');
+//     } catch(err){
+//         app.log.error(err);
+//         process.exit(1);
+//     }
+// }
+
+// start();
+
 module.exports = app;
