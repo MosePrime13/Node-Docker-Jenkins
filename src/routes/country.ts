@@ -15,7 +15,7 @@ export default function (app: fastify.FastifyInstance, options, done){
 
     app.get('/country', {}, async(req, res) => {
 
-        // throw new Error('Something went bad');
+        throw new Error('Something went bad');
 
         const dela = await db.Country.findAll();
         res.send(dela);
